@@ -15,9 +15,8 @@ unsigned char get_scancode()
 
 
 
-void set_key(char c, char *character)
+void set_key()
 {
-  *character			=		c;
   clicked			=		1;
   canSend			=		1;
 }
@@ -26,11 +25,16 @@ void set_key(char c, char *character)
 
 void keyboard_handler()
 {
+
   unsigned char scancode;
   unsigned int shift_key	=		0;
   canSend			=		0;
-
+  clicked			=		0;
+  scancode			=		0;
+  
   scancode			=		get_scancode();
+
+
   if	(scancode		==		0x2A)
     {
 	shift_key		=		1;
@@ -51,6 +55,8 @@ void keyboard_handler()
 	clear_screen();
       }
 
+
+      
       if	(scancode	==		0x01) {
 	clicked			=		0;
       }
@@ -58,142 +64,196 @@ void keyboard_handler()
       if	(scancode	==		0x1E
 		 &&
 		 clicked	==		0) {
-	set_key	('a',			&character);
-           
+	set_key	();
+	character			=		'a';
       }
+
+      
       if	(scancode	==		0x30
 		 &&
 		 clicked	==		0) {
-	set_key	('b',			&character);
-
+	set_key	();
+	character			=		'b';
       }
+
+      
       if (scancode 		== 		0x2E
 	  &&
 	  clicked 		== 		0) {
-	set_key	('c',			&character);
+	set_key	();
+	character			=		'c';
       }
+      
       if (scancode 		== 		0x20
 	  &&
 	  clicked 		== 		0) {
-	set_key	('d',			&character);
+	set_key	();
+	character			=		'd';
       }
       if (scancode 		== 		0x12
 	  &&
 	  clicked 		== 		0) {
-	set_key	('e',			&character);
+	set_key	();
+	character			=		'e';
       }
       if (scancode 		== 		0x21
 	  &&
 	  clicked 		== 		0) {
-	set_key	('f',			&character);
+	set_key	();
+	character			=		'f';
       }
       if (scancode 		== 		0x22
 	  &&
 	  clicked 		== 		0) {
-	set_key	('g',			&character);
+	set_key	();
+	character			=		'g';
       }
 
       if (scancode 		== 		0x23
 	  &&
 	  clicked 		== 		0) {
-	set_key	('h',			&character);
+	set_key	();
+	character			=		'h';
       }
+
       if (scancode 		== 		0x17
 	  &&
 	  clicked 		== 		0) {
-	set_key	('i',			&character);
+	set_key	();
+	character			=		'i';
       }
+
       if (scancode 		== 		0x24
 	  &&
 	  clicked 		== 		0) {
-	set_key	('j',			&character);
+	set_key	();
+	character			=		'j';
       }
+
       if (scancode 		== 		0x25
 	  &&
 	  clicked 		== 		0) {
-	set_key	('k',			&character);
+	set_key	();
+	character			=		'k';
       }
+
       if (scancode 		== 		0x26
 	  &&
 	  clicked 		== 		0) {
-	set_key	('l',			&character);
+	set_key	();
+	character			=		'l';
       }
+
       if (scancode 		== 		0x32
 	  &&
 	  clicked 		== 		0) {
-	set_key	('m',			&character);
+	set_key	();
+	character			=		'm';
       }
+
       if (scancode 		== 		0x31
 	  &&
 	  clicked 		== 		0) {
-	set_key	('n',			&character);
+	set_key	();
+	character			=		'n';
       }
+
       if (scancode 		== 		0x18
 	  &&
 	  clicked 		== 		0) {
-	set_key	('o',			&character);
+	set_key	();
+	character			=		'o';
       }
+
       if (scancode 		== 		0x19
 	  &&
 	  clicked 		== 		0) {
-	set_key	('p',			&character);
+	set_key	();
+	character			=		'p';
       }
+
       if (scancode 		== 		0x10
 	  &&
 	  clicked 		== 		0) {
-	set_key	('q',			&character);
+	set_key	();
+	character			=		'q';
       }
+
       if (scancode 		== 		0x13
 	  &&
 	  clicked 		== 		0) {
-	set_key	('r',			&character);
+	set_key	();
+	character			=		'r';
       }
+
       if (scancode 		== 		0x1F
 	  &&
 	  clicked 		== 		0) {
-	set_key	('s',			&character);
+	set_key	();
+	character			=		's';
       }
+
       if (scancode 		== 		0x14
 	  &&
 	  clicked 		== 		0) {
-	set_key	('t',			&character);
+	set_key	();
+	character			=		't';
       }
+
       if (scancode 		== 		0x16
 	  &&
 	  clicked 		== 		0) {
-	set_key	('u',			&character);
+	set_key	();
+	character			=		'u';
       }
+      
       if (scancode 		== 		0x2F
 	  &&
 	  clicked 		== 		0) {
-	set_key	('v',			&character);
+	set_key	();
+	character			=		'v';
       }
       if (scancode 		== 		0x11
 	  &&
 	  clicked 		== 		0) {
-	set_key	('w',			&character);
+	set_key	();
+	character			=		'w';
       }
       if (scancode 		== 		0x2D
 	  &&
 	  clicked 		== 		0) {
-	set_key	('x',			&character);
+	set_key	();
+	character			=		'x';
       }
       if (scancode 		== 		0x15
 	  &&
 	  clicked 		== 		0) {
-	set_key	('y',			&character);
+	set_key	();
+	character			=		'y';
       }
       if (scancode 		== 		0x2c
 	  &&
 	  clicked 		== 		0) {
-	set_key	('z',			&character);
+	set_key	();
+	character			=		'z';
       }
 
       if (canSend 		== 		1) {
-	vga_index 		+= 		10;
+	//	vga_index 		+= 		10;
 	print_char(character, RED);
+	canSend			=		0;
       }
     }
-
+      
 }
 
+int a = 0;
+
+void keyboard_handler_test()
+{
+  if (a < 20)
+    {
+      print_char('r', RED);
+      a++;
+    }
+}

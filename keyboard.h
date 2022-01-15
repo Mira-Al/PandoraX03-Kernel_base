@@ -6,5 +6,6 @@
 
 unsigned char get_scancode();
 void keyboard_handler();
+void keyboard_handler_test();
 
 #endif
