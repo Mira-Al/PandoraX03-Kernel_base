@@ -17,6 +17,11 @@ grub-mkrescue -o pandorax03.iso iso/
 
 ```  
 
+Because of -m32 you should install i386  
+```
+apt-get install ia32-libs
+```
+
 
 To install your iso file on USB just use balena etcher:  
 [Etcher](https://www.balena.io/etcher/)  
