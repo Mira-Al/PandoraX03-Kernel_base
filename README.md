@@ -14,7 +14,8 @@ mkdir -p iso/boot/grub
 cp kernel iso/boot/
 cp grub.cfg iso/boot/grub/
 grub-mkrescue -o pandorax03.iso iso/
-```
+
+```  
 
 
 To install your iso file on USB just use balena etcher:  
