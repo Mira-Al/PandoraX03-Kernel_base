@@ -19,7 +19,7 @@ grub-mkrescue -o pandorax03.iso iso/
 
 Because of -m32 you should install i386  
 ```
-apt-get install ia32-libs
+apt-get install ia32-libs libc6-dev-i386
 ```
 
 
